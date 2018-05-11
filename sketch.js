@@ -3,7 +3,7 @@ var song,myCallback = function() {
   /*var num = Math.floor(Math.random() * 105);
   song = loadSound(num.toString()+'.webm');
   song.onended(myCallback);*/
-  preload;
+  preload();
   song.play();
   song.onended(myCallback);
        };
@@ -16,15 +16,15 @@ var volhistory = [];
 function preload() {
   var songNum = Math.floor(Math.random() * 105);
   console.log(songNum);
-  song = loadSound(songNum+'.webm');
+  song = loadSound('beep.mp3');
+  
   //song.onended(myCallback);
 }
 
 function setup() {
   createCanvas(200, 200);
   angleMode(DEGREES);
-  
-  song.play();
+  //song.play();
   song.onended(myCallback);
   amp = new p5.Amplitude();
 }

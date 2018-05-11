@@ -3,8 +3,19 @@
 <head>
 <meta charset = "utf-8"/>
 <title>Slackpop Playlist</title>
+<style>
+		body {
+			margin:0;
+			padding:0;
+			overflow: hidden;
+		}
+		canvas {
+			margin:auto;
+		}
+	</style>  
 </head>
 <script langage="javascript">
+/*
 var a = Math.floor(Math.random() * 105);     // returns a number between 0 and 104 
 console.log(a);
 var player = document.createElement("AUDIO");
@@ -16,7 +27,12 @@ player.onended = function() {
 	player.play();
 	console.log(num);   
 };
+*/
 </script>
+<script src="p5.min.js"></script>
+    <script src="addons/p5.dom.min.js"></script>
+    <script src="addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
 <body bgcolor="black">
 </body>
 </html>

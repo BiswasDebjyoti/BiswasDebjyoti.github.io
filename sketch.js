@@ -13,7 +13,13 @@ function toggleSong() {
 }
 
 function preload() {
-  song = loadSound('https://raw.githubusercontent.com/CodingTrain/website/master/Tutorials/P5JS/p5.js_sound/17.10_radialGraph/this-dot-kp.mp3');
+  var a = Math.floor(Math.random() * 105);
+  song = loadSound(a.toString()+'.webm');
+  console.log(a);
+  song.onended = function(){
+	var num = Math.floor(Math.random() * 105);
+	song = loadSound(num.toString()+'.webm');
+};
 }
 
 function setup() {

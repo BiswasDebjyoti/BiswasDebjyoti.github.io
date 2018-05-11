@@ -1,9 +1,23 @@
-<html><head><title>Slackpop Playlist</title></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Slackpop Playlist</title>
+</head>
 <script langage="javascript">
 var a = Math.floor(Math.random() * 105);     // returns a number between 0 and 104 
 console.log(a);
+var player = document.createElement("AUDIO");
+player.src=a.toString()+".webm";
+player.play();
+player.onended = function() {
+	var num = Math.floor(Math.random() * 105); 
+	player.src=num.toString() + ".webm";
+	player.play();
+	console.log(num);   
+};
 </script>
 <body bgcolor="black">
 <h1>This is slackpop music playlist</h1>
-<audio src="0.webm" autoplay></audio>
-</body></html>
+</body>
+</html>

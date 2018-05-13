@@ -2,6 +2,8 @@
 <html lang = "en">
 <head>
 <meta charset = "utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Slackpop Playlist</title>
 <style>
 		body {
@@ -14,6 +16,7 @@
 		}
 	</style>  
 </head>
+<body bgcolor="black">
 <script langage="javascript">
 
 var a = Math.floor(Math.random() * 105);     // returns a number between 0 and 104 
@@ -29,6 +32,15 @@ player.onended = function() {
 };
 
 </script>
-<body bgcolor="black">
+  <div id="particles-js">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function(){
+      console.log('particles.json loaded...');
+    });
+  </script>
 </body>
 </html>
